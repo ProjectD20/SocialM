@@ -14,13 +14,21 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+    console.log("enter login on init");
+
   }
  async login(){
-    const{username,password}=this
+  console.log("enter login");
+    const{username,password}=this;
+    
     try{
-const res=await this.afAuth.auth.signInWithEmailAndPassword(username+'@gmail.com',password)
+const res=await this.afAuth.auth.signInWithEmailAndPassword(username+'@socialm.com',password);
+console.log("hello");
     }catch(err){
       console.dir(err);
+      if(err.code == "auth/user-not-found"){
+        console.log("user not found");
+      }
     }
   }
 
