@@ -41,6 +41,7 @@
       "trace"
     ],
     "no-empty": false,
+    "typescript.showUnused": false,
     "no-inferrable-types": [
       true,
       "ignore-params"
